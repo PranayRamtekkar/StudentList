@@ -3,45 +3,9 @@
       xmlns:th="http://www.thymeleaf.org"
       lang="en">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css"/>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta charset="UTF-8">
     <title>Student Management System</title>
 </head>
 <body>
-<div class="cols-sm-6" th:align="center">
-
-    <h1 th:align="center">Student Management System</h1>
-    <h3 th:align="center"><a th:href="@{'/new'}">Add New</a></h3>
-
-    <div class="col-sm-6" th:align="center">
-        <div class="panel-body" th:align="center">
-            <table class="table">
-                <thead class="thead-dark">
-                <tr>
-                    <th>Student ID</th>
-                    <th>Student Name</th>
-                    <th>Course</th>
-                    <th>Fee</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr th:each="studentModel : ${list}">
-                    <td th:text="${studentModel.id}">Student ID</td>
-                    <td th:text="${studentModel.name}">Student Name</td>
-                    <td th:text="${studentModel.course}">Course</td>
-                    <td th:text="${studentModel.fee}">Fee</td>
-                    <td><a th:href="@{'/edit/' + ${studentModel.getId()}}">Edit</a></td>
-                    <td><a th:href="@{'/delete/' + ${studentModel.getId()}}">Delete</a></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-
+<a href="src\main\resources\templates\index.html"> Go to Page</a>
 </body>
 </html>
